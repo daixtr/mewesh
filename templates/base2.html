@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>mewesh</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="/static/bootstrap.min.css">
+    <script src="/static/jquery.min.js"></script>
+    <script src="/static/bootstrap.min.js"></script>
+    <script src="/static/d3-3.5.12.min.js"></script>
+    <link href='https://fonts.googleapis.com/css?family=Abel' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
+    <!-- <script src="/static/edbutton.js"></script> -->
+    <style>
+        .my-text {
+        font-size: 1.5em;
+        font-family: 'Abel', sans-serif;
+        }
+        .hint {
+        font-size: 2.5em;
+        font-family: 'Pacifico', cursive;
+        }
+    </style>
+</head>
+
+<body>
+        <nav class="navbar navbar-inverse">
+            <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#" ><font color="white">mewesh</font></a>
+            </div>
+
+            <div id="navbar" class="navbar-collapse collapse">
+                {% if showlogin == True %}
+                <form class="navbar-form navbar-right" action="" method="post">
+                    <div class="form-group"><input type="text" id="username" placeholder="Username" class="form-control" name="username" value="{{ request.form.username }}"></div>
+                    <div class="form-group"><input type="password" id="password" placeholder="Password" class="form-control" name="password" value="{{ request.form.password }}"></div>
+                    <button type="submit" id="loginButton" class="btn btn-success">Sign in</button>
+                </form>
+                {% endif %}
+
+                {% if error %}
+                <p class="error"><strong>Error:</strong> {{ error }}</p>
+                {% endif %}
+
+                {% for message in get_flashed_messages() %}
+                    {{ message }}
+                {% endfor %}
+            </div>
+            </div>
+        </nav>
+
+    <!-- child template -->
+    {% block content %}{% endblock %}
+
+    <!-- errors -->
+    {% if error %}
+    <p class="error"><strong>Error:</strong> {{ error }}</p>
+    {% endif %}
+
+    <!-- messages -->
+    {% for message in get_flashed_messages() %}
+    {{ message }}
+    {% endfor %}
+</body>
+</html>

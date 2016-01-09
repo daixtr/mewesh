@@ -1,0 +1,19 @@
+**************************
+* I COPY FILES           *
+**************************
+Copy dim.sh and mewe.sh to your ${HOME}/bin
+
+*****************************************************************
+* II Append the two statements below to your shell login script *
+* usually in .bash_profile if using bash                        *
+*****************************************************************
+
+export SESS=/home/daixtr/mewesh/static/TTY/$(basename $(mktemp))
+/usr/bin/ttyrec $SESS
+
+************************************************************
+* III Append the one-line below to your shell logoutscript *
+* usually the .bash_logout if using bash                   *
+************************************************************
+
+/usr/bin/tty2js -s $(~/bin/dim.sh) $SESS /home/daixtr/mewesh/static/sessions/$(basename $(mktemp))

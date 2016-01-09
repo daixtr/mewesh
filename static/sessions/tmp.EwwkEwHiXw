@@ -1,0 +1,10 @@
+;(function(A,B,D){function k(t,o){return {key:true,time:t,ops:o}}function f(t,o){return {key:false,time:t,ops:o}}function d(r,c,t,a){return ["draw",r,c,t,a]}function c(r,c){return ["setCursor",r,c]}function p(t,s){return ["copy",t,s]}loadFrames(
+[k(33,[["setRows",18],["setCols",0,74],d(0,0,"daixtr@ubu1504:~$                                                         ",B),["setCols",1,74],d(1,0,A,B),["setCols",2,74],d(2,0,A,B),["setCols",3,74],d(3,0,A,B),["setCols",4,74],d(4,0,A,B),["setCols",5,74],d(5,0,A,B),["setCols",6,74],d(6,0,A,B),["setCols",7,74],d(7,0,A,B),["setCols",8,74],d(8,0,A,B),["setCols",9,74],d(9,0,A,B),["setCols",10,74],d(10,0,A,B),["setCols",11,74],d(11,0,A,B),["setCols",12,74],d(12,0,A,B),["setCols",13,74],d(13,0,A,B),["setCols",14,74],d(14,0,A,B),["setCols",15,74],d(15,0,A,B),["setCols",16,74],d(16,0,A,B),["setCols",17,74],d(17,0,A,B),c(18,0)])
+,f(2370,[d(0,18,"e",D),c(19,0)])
+,f(2447,[d(0,19,"x",D),c(20,0)])
+,f(2651,[d(0,20,"i",D),c(21,0)])
+,f(2732,[d(0,21,"t",D),c(22,0)])
+,f(3059,[d(1,0,"exit",[[131840,4]]),c(0,2)])])})(
+ "                                                                          "
+,[[131840,74]]
+,[[131840,1]])

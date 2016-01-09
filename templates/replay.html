@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>mewesh</title>
+        <meta charset=utf-8>
+        <link rel="stylesheet" href="/static/components/ttycast-client/ttycast.css">  
+        <link rel="stylesheet" href="/static/components/ttyreplay.css"> 
+        <link rel="stylesheet" type="text/css" href="/static/uielements.css">
+        <style>
+            label { padding: 0; marign: 0; display: block; }
+            textarea { width: 100%; border: 1px solid #333; padding: 4px; }
+            .the-fix { padding-right: 10px; }
+        </style>
+
+    </head>
+
+    <body onload="jsloaded();"> 
+
+ 	<ul class="tabs ocean">
+            <li class="ocean"><a href="/">home</a></li>
+            <li class="ocean"><a href="#">About</a></li>
+        </ul>
+        <script src="/static/dx.js"></script>
+        <script src="/static/components/jquery/jquery.js"></script>
+        <script src="/static/components/ttycast-client/colors.js"></script>
+        <script src="/static/components/screen-buffer/screen-buffer.js"></script>
+        <script src="/static/components/ttycast-client/display-buffer.js"></script>
+        <script src="/static/components/bsearch/bsearch.js"></script> 
+        <script src="/static/components/eventEmitter/EventEmitter.js"></script>
+        <script src="/static/components/ttyreplay.js"></script> 
+
+        <div id="content">
+            <div id="welcome" style="display:none" > 
+                <table border="1" align="left" width="1200">
+                    <col width="350" />
+                    <col width="450" />
+                    <col width="400" />
+                    <tr>
+                    <th>session identifier</th>
+                    <th>author datetime</th>
+                    <th>description</th>
+                    </tr>
+                    <tr valign="top"><td align="left"><p>list_sessions();</p></td>
+                    <td align="left"><p>list_desc();</p></td>
+                    </tr>
+                </table>
+            </div> 
+
+            <div class="terminal-container" id="container" style="display:none">
+                <div class="terminal" id="terminal"></div>
+                <div class="nav-bar">
+                    <div id="play-pause-button" class="play-pause-button"></div>
+                    <div id="slider" class="time-slider">
+                        <div id="thumb" class="bar"></div>
+                        <div id="time" class="time"></div>
+                        <div id="position" class="position"></div>
+                    </div>
+                </div>
+            </div>
+        </div> 
+
+        <script>
+            var jsdata = {{ sess|tojson }};
+            var w = {{wid|tojson}}
+            dxreplay(jsdata,w,{{ public }}); 
+        </script>
+
+        <label class="the-fix">
+        <p align="left">COMMENTS</p>
+        <textarea></textarea>
+        </label>
+        <div class="column"><!--layout purposes only-->
+            <div class="button-wrapper">
+                <a href="#" class="button ocean">Post</a>
+            </div>
+        </div>
+
+    </body> 
+</html>

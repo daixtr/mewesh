@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+{% block content %}
+
+<table class="table table-hover" style="font-family:monospace;">
+    <thead>
+    <tr>
+        <th>activity</th>
+        <th>comments</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for xsession in sessions %}
+      <tr>
+        <td><a href="replay/{{ xsession }}">{{ xsession }} </a></td>
+        <td>test comment</td>
+      </tr>
+      {% endfor %}
+    </tbody>
+</table>
+
+{% endblock %}

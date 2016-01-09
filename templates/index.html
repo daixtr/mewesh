@@ -1,0 +1,27 @@
+{% extends "base2.html" %}
+{% block content %}
+
+<div class="container">
+  <div class="jumbotron">
+    <h1>mewe shell</h1>      
+    <p>"bringing collaborative data analytic inspection one-step further!"</p>      
+    <a href="/takealook" class="btn btn-info btn-lg"><span class="glyphicon glyphicon-search" style="color:violet"></span> inspect</a>
+  </div>
+
+  <div class="my-text">
+    <div class="col-md-12">
+        <span style="color:red" align="center">
+            {% for message in get_flashed_messages() %}
+            {{ message }}
+            {% endfor %}
+        </span>
+    <font class="hint">Concept Map:</font>
+    <hr>
+    <script src="/static/snippet.js"></script>
+    <script>
+        //setInterval(refresh_mindmap,5000);    
+    </script>
+    <div class="clearfix visible-lg"></div>
+  </div>
+</div>
+{% endblock %}
