@@ -1,5 +1,5 @@
 # mewesh
-bringing cli collaboration to the cloud and perfect server access  inspection transparency
+bringing collaborative data analytic inspection one-step further
 
 Setup:
 
