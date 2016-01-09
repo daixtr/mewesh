@@ -22,11 +22,12 @@ To be later improved in a unified means. For now, to re-use existing usable part
 
 2) Client must open two terminals. On first terminal,
 
-ttyplay -n /tmp/ttycast | ssh username@svr PORT=12345 ttycast
+mkfifo /tmp/fifo1
+ttyplay -n /tmp/fifo1 | ssh username@svr PORT=12345 ttycast
 
 On second terminal,
 
-ttyrec /tmp/ttycast
+ttyrec /tmp/fifo1
 
 3) Access http://svr:12345 to view the wemesh collaborative shell
 
