@@ -23,6 +23,7 @@ To be later improved in a unified means. For now, to re-use existing usable part
 2) Client must open two terminals. On first terminal,
 
 mkfifo /tmp/fifo1
+
 ttyplay -n /tmp/fifo1 | ssh username@svr PORT=12345 ttycast
 
 On second terminal,
