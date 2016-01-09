@@ -1,5 +1,6 @@
 # mewesh
-bringing collaborative data analytic inspection one-step further
+Bringing collaborative data analytic inspection one-step further.
+Allowing pair programming across the cloud and integrating system administration tasks with pDevelopment programming taskss. to allow both sides to meet halfway and communiicate to each other.  The tool also allows for  server auditing  activities and allowing compliance check and monitoring team performance and cmeasusing  daily current activities.  Tool also allows  knowledge accumultaion and root-cause analyses tool
 
 Setup:
 
